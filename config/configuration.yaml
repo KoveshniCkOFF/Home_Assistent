@@ -1,18 +1,16 @@
 homeassistant:
   name: Home
-  latitude: 55.7558
-  longitude: 37.6173
-  elevation: 200
+  latitude: 0
+  longitude: 0
+  elevation: 0
   unit_system: metric
   currency: RUB
   country: RU
   time_zone: Europe/Moscow
 
-logger:
-  default: info
-
-frontend:
-
-automation: !include automations.yaml
-script: !include scripts.yaml
-scene: !include scenes.yaml
+http:
+  server_host: 0.0.0.0
+  server_port: 8123
+  use_x_forwarded_for: true
+  trusted_proxies:
+    - 0.0.0.0/0
