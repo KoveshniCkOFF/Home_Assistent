@@ -17,4 +17,10 @@ http:
 logger:
   default: info
   logs:
-    homeassistant.components.go2rtc.server: error
+    homeassistant.components.go2rtc.server: error 
+http:
+  use_x_forwarded_for: true
+  trusted_proxies:
+    - "::1"
+    - "0.0.0.0/0"
+    
