@@ -7,10 +7,18 @@ homeassistant:
   currency: RUB
   country: RU
   time_zone: Europe/Moscow
+  media_dirs:
+    media: /mnt/usbdrive
 
 http:
   server_host: 0.0.0.0
   server_port: 8123
+  use_x_forwarded_for: true
+  trusted_proxies:
+    - 127.0.0.1
+    - ::1
+    - 0.0.0.0/0  # Это разрешает все, но не безопасно
+
 logger:
   default: info
   logs:
