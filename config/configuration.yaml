@@ -13,14 +13,10 @@ http:
   server_port: 8123
   use_x_forwarded_for: true
   trusted_proxies:
-    - 0.0.0.0/0
-logger:
-  default: info
-  logs:
-    homeassistant.components.go2rtc.server: error 
-http:
-  use_x_forwarded_for: true
-  trusted_proxies:
     - 127.0.0.1
     - ::1
     - 0.0.0.0/0  # это разрешает всех — не очень безопасно
+logger:
+  default: info
+  logs:
+    homeassistant.components.go2rtc.server: error
